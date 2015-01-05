@@ -500,6 +500,11 @@
               <FileType>1</FileType>
               <FilePath>.\simpleRoundRobin.c</FilePath>
             </File>
+            <File>
+              <FileName>mutex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mutex.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -962,6 +967,11 @@
               <FileName>simpleRoundRobin.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\simpleRoundRobin.c</FilePath>
+            </File>
+            <File>
+              <FileName>mutex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mutex.c</FilePath>
             </File>
           </Files>
         </Group>

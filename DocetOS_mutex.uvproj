@@ -505,6 +505,11 @@
               <FileType>1</FileType>
               <FilePath>.\mutex.c</FilePath>
             </File>
+            <File>
+              <FileName>sleep.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\sleep.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -972,6 +977,11 @@
               <FileName>mutex.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\mutex.c</FilePath>
+            </File>
+            <File>
+              <FileName>sleep.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\sleep.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -3,6 +3,7 @@
 #include "serial.h"
 #include "simpleRoundRobin.h"
 #include "mutex.h"
+#include "sleep.h"
 
 volatile OS_mutex_t printOuti;
 volatile OS_mutex_t * printOut = &printOuti;
@@ -19,7 +20,9 @@ void task2(void const *const args) {
 	while (1) {
 		OS_mutex_acquire(printOut);
 		printf("Message from Task 2\r\n");
+		OS_sleep(100);
 		OS_mutex_release(printOut);
+		OS_sleep(100);
 	}
 }
 void task3(void const *const args) {
@@ -41,6 +44,7 @@ void task5(void const *const args) {
 		OS_mutex_acquire(printOut);
 		printf("Message from Task 5\r\n");
 		OS_mutex_release(printOut);
+		OS_sleep(100);
 	}
 }
 void task6(void const *const args) {

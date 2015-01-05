@@ -1,0 +1,13 @@
+.\flash\sleep.o: sleep.c
+.\flash\sleep.o: sleep.h
+.\flash\sleep.o: C:\Keil_u4\ARM\ARMCC\bin\..\include\stdint.h
+.\flash\sleep.o: .\OS\os_internal.h
+.\flash\sleep.o: .\OS\os.h
+.\flash\sleep.o: .\OS\task.h
+.\flash\sleep.o: C:\Keil_u4\ARM\ARMCC\bin\..\include\stddef.h
+.\flash\sleep.o: C:\Keil_u4\ARM\Inc\ST\STM32F4xx\stm32f4xx.h
+.\flash\sleep.o: C:\Keil_u4\ARM\CMSIS\Include\core_cm4.h
+.\flash\sleep.o: C:\Keil_u4\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\sleep.o: C:\Keil_u4\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\sleep.o: C:\Keil_u4\ARM\CMSIS\Include\core_cm4_simd.h
+.\flash\sleep.o: C:\Keil_u4\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h

@@ -1,6 +1,7 @@
 #ifndef _OS_H_
 #define _OS_H_
 #define TASK_STATE_WAIT (1UL << 2)
+#define TASK_STATE_SLEEP (1UL << 3)
 #include "task.h"
 
 /* A set of numeric constants giving the appropriate SVC numbers for various callbacks. 

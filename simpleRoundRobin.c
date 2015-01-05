@@ -42,11 +42,18 @@ static OS_TCB_t const * simpleRoundRobin_scheduler(void) {
 	for (int j = 1; j <= SIMPLE_RR_MAX_TASKS; j++) {
 		i = (i + 1) % SIMPLE_RR_MAX_TASKS;
 		if (tasks[i] != 0) {
-				if(tasks[i]->state & TASK_STATE_WAIT){
-					
+			OS_TCB_t * task = tasks[i];
+				if(task->state & TASK_STATE_WAIT){//Do nothing if task is waiting
+				}
+				if(task->state & TASK_STATE_SLEEP){//If task is just asleep
+					uint32_t ticks = OS_elapsedTicks();
+					if(task->data <= ticks){//Check to see if it should be awake
+						task->state = task->state & (~ TASK_STATE_SLEEP); //wake task
+						return task;
+					}
 				}
 				else{
-					return tasks[i];
+					return task;
 				}
 		}
 	}
