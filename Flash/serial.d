@@ -1,0 +1,9 @@
+.\flash\serial.o: utils\serial.c
+.\flash\serial.o: utils\../serial.h
+.\flash\serial.o: C:\Keil_u4\ARM\Inc\ST\STM32F4xx\stm32f4xx.h
+.\flash\serial.o: C:\Keil_u4\ARM\CMSIS\Include\core_cm4.h
+.\flash\serial.o: C:\Keil_u4\ARM\ARMCC\bin\..\include\stdint.h
+.\flash\serial.o: C:\Keil_u4\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\serial.o: C:\Keil_u4\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\serial.o: C:\Keil_u4\ARM\CMSIS\Include\core_cm4_simd.h
+.\flash\serial.o: C:\Keil_u4\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h

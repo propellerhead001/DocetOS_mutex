@@ -1,0 +1,87 @@
+Dependencies for Project 'DocetOS_mutex', Target 'STM32F407 Flash': (DO NOT MODIFY !)
+F (.\utils\retarget.c)(0x5288EB00)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\OS --c99-I C:\Keil_u4\ARM\RV31\INC-I C:\Keil_u4\ARM\CMSIS\Include-I C:\Keil_u4\ARM\Inc\ST\STM32F4xx-o .\flash\retarget.o --omf_browse .\flash\retarget.crf --depend .\flash\retarget.d)
+I (C:\Keil_u4\ARM\ARMCC\include\stdio.h)(0x51C827C4)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\stm32f4xx.h)(0x549014B5)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4.h)(0x532C6842)
+I (C:\Keil_u4\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmInstr.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmFunc.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4_simd.h)(0x532C6842)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532C63DA)
+F (.\utils\system_stm32f4xx.c)(0x5288EB00)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\OS --c99-I C:\Keil_u4\ARM\RV31\INC-I C:\Keil_u4\ARM\CMSIS\Include-I C:\Keil_u4\ARM\Inc\ST\STM32F4xx-o .\flash\system_stm32f4xx.o --omf_browse .\flash\system_stm32f4xx.crf --depend .\flash\system_stm32f4xx.d)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\stm32f4xx.h)(0x549014B5)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4.h)(0x532C6842)
+I (C:\Keil_u4\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmInstr.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmFunc.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4_simd.h)(0x532C6842)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532C63DA)
+F (.\utils\startup_stm32f4xx.s)(0x5288EB00)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil_u4\ARM\RV31\INC-I C:\Keil_u4\ARM\CMSIS\Include-I C:\Keil_u4\ARM\Inc\ST\STM32F4xx--list .\flash\startup_stm32f4xx.lst --xref -o .\flash\startup_stm32f4xx.o --depend .\flash\startup_stm32f4xx.d)
+F (.\utils\serial.c)(0x5288EB00)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\OS --c99-I C:\Keil_u4\ARM\RV31\INC-I C:\Keil_u4\ARM\CMSIS\Include-I C:\Keil_u4\ARM\Inc\ST\STM32F4xx-o .\flash\serial.o --omf_browse .\flash\serial.crf --depend .\flash\serial.d)
+I (utils\../serial.h)(0x5288EB00)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\stm32f4xx.h)(0x549014B5)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4.h)(0x532C6842)
+I (C:\Keil_u4\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmInstr.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmFunc.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4_simd.h)(0x532C6842)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532C63DA)
+F (.\main.c)(0x54AA77A3)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\OS -I.\OS --c99-I C:\Keil_u4\ARM\RV31\INC-I C:\Keil_u4\ARM\CMSIS\Include-I C:\Keil_u4\ARM\Inc\ST\STM32F4xx-o .\flash\main.o --omf_browse .\flash\main.crf --depend .\flash\main.d)
+I (.\OS\os.h)(0x54945198)
+I (.\OS\task.h)(0x5288EB00)
+I (C:\Keil_u4\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (C:\Keil_u4\ARM\ARMCC\include\stddef.h)(0x51C827C4)
+I (C:\Keil_u4\ARM\ARMCC\include\stdio.h)(0x51C827C4)
+I (serial.h)(0x5288EB00)
+I (simpleRoundRobin.h)(0x54958C21)
+I (.\OS\os_internal.h)(0x5288EB00)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\stm32f4xx.h)(0x549014B5)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmInstr.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmFunc.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4_simd.h)(0x532C6842)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532C63DA)
+I (mutex.h)(0x54958D63)
+F (.\simpleRoundRobin.c)(0x54959824)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\OS -I.\OS --c99-I C:\Keil_u4\ARM\RV31\INC-I C:\Keil_u4\ARM\CMSIS\Include-I C:\Keil_u4\ARM\Inc\ST\STM32F4xx-o .\flash\simpleroundrobin.o --omf_browse .\flash\simpleroundrobin.crf --depend .\flash\simpleroundrobin.d)
+I (simpleRoundRobin.h)(0x54958C21)
+I (.\OS\os.h)(0x54945198)
+I (.\OS\task.h)(0x5288EB00)
+I (C:\Keil_u4\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (C:\Keil_u4\ARM\ARMCC\include\stddef.h)(0x51C827C4)
+I (.\OS\os_internal.h)(0x5288EB00)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\stm32f4xx.h)(0x549014B5)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmInstr.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmFunc.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4_simd.h)(0x532C6842)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532C63DA)
+F (.\mutex.c)(0x5495AE74)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\OS -I.\OS --c99-I C:\Keil_u4\ARM\RV31\INC-I C:\Keil_u4\ARM\CMSIS\Include-I C:\Keil_u4\ARM\Inc\ST\STM32F4xx-o .\flash\mutex.o --omf_browse .\flash\mutex.crf --depend .\flash\mutex.d)
+I (mutex.h)(0x54958D63)
+I (.\OS\task.h)(0x5288EB00)
+I (C:\Keil_u4\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (C:\Keil_u4\ARM\ARMCC\include\stddef.h)(0x51C827C4)
+I (.\OS\OS.h)(0x54945198)
+I (simpleRoundRobin.h)(0x54958C21)
+I (.\OS\os_internal.h)(0x5288EB00)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\stm32f4xx.h)(0x549014B5)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmInstr.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmFunc.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4_simd.h)(0x532C6842)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532C63DA)
+F (.\OS\os_asm.s)(0x54955E2F)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil_u4\ARM\RV31\INC-I C:\Keil_u4\ARM\CMSIS\Include-I C:\Keil_u4\ARM\Inc\ST\STM32F4xx--list .\flash\os_asm.lst --xref -o .\flash\os_asm.o --depend .\flash\os_asm.d)
+F (.\OS\os.c)(0x546F0AA7)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\OS --c99-I C:\Keil_u4\ARM\RV31\INC-I C:\Keil_u4\ARM\CMSIS\Include-I C:\Keil_u4\ARM\Inc\ST\STM32F4xx-o .\flash\os.o --omf_browse .\flash\os.crf --depend .\flash\os.d)
+I (OS\os.h)(0x54945198)
+I (OS\task.h)(0x5288EB00)
+I (C:\Keil_u4\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (C:\Keil_u4\ARM\ARMCC\include\stddef.h)(0x51C827C4)
+I (OS\os_internal.h)(0x5288EB00)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\stm32f4xx.h)(0x549014B5)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmInstr.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cmFunc.h)(0x532C6842)
+I (C:\Keil_u4\ARM\CMSIS\Include\core_cm4_simd.h)(0x532C6842)
+I (C:\Keil_u4\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532C63DA)
+I (C:\Keil_u4\ARM\ARMCC\include\stdlib.h)(0x51C827C4)
+I (C:\Keil_u4\ARM\ARMCC\include\string.h)(0x51C827C4)
+F (.\utils\hardfault.c)(0x5288EB00)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\OS --c99-I C:\Keil_u4\ARM\RV31\INC-I C:\Keil_u4\ARM\CMSIS\Include-I C:\Keil_u4\ARM\Inc\ST\STM32F4xx-o .\flash\hardfault.o --omf_browse .\flash\hardfault.crf --depend .\flash\hardfault.d)
