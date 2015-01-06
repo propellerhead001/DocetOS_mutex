@@ -20,7 +20,6 @@ void task2(void const *const args) {
 	while (1) {
 		OS_mutex_acquire(printOut);
 		printf("Message from Task 2\r\n");
-		OS_sleep(100);
 		OS_mutex_release(printOut);
 		OS_sleep(100);
 	}
