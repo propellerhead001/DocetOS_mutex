@@ -13,6 +13,7 @@ void task1(void const *const args) {
 		OS_mutex_acquire(printOut);
 		printf("Message from Task 1\r\n");
 		OS_mutex_release(printOut);
+		OS_sleep(100);
 	}
 }
 
@@ -29,6 +30,7 @@ void task3(void const *const args) {
 		OS_mutex_acquire(printOut);
 		printf("Message from Task 3\r\n");
 		OS_mutex_release(printOut);
+		OS_sleep(200);
 	}
 }
 void task4(void const *const args) {

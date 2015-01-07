@@ -23,6 +23,7 @@ void simpleRoundRobin_notify(void * reason);
 
 static OS_TCB_t * tasks[SIMPLE_RR_MAX_TASKS] = {0};
 static OS_TCB_t * high[SIMPLE_RR_MAX_TASKS] = {0};
+volatile OS_PriorityStates_t priorityState = HIGH1;
 
 /* Scheduler block for the simple round-robin */
 OS_Scheduler_t const simpleRoundRobinScheduler = {
@@ -38,24 +39,56 @@ OS_Scheduler_t const simpleRoundRobinScheduler = {
 /* Round-robin scheduler callback */
 static OS_TCB_t const * simpleRoundRobin_scheduler(void) {
 	static int i = 0;
+	switch(priorityState){
+		case HIGH1 : priorityState = HIGH2;
+		break;
+		case HIGH2 : priorityState = LOW1;
+		break;
+		case LOW1 : priorityState = HIGH1;
+		break;	
+	}
+	
 	// Clear the yield flag if it's set - we simply don't care
 	OS_currentTCB()->state &= ~TASK_STATE_YIELD;
-	for (int j = 1; j <= SIMPLE_RR_MAX_TASKS; j++) {
-		i = (i + 1) % SIMPLE_RR_MAX_TASKS;
-		if (tasks[i] != 0) {
-			OS_TCB_t * task = tasks[i];
-				if(task->state & TASK_STATE_WAIT){//Do nothing if task is waiting
-				}
-				if(task->state & TASK_STATE_SLEEP){//If task is just asleep
-					uint32_t ticks = OS_elapsedTicks();
-					if(task->data <= ticks){//Check to see if it should be awake
-						task->state = task->state & (~ TASK_STATE_SLEEP); //wake task
+	//Check to see which priority tasks should be run
+	if(priorityState == LOW1){
+		for (int j = 1; j <= SIMPLE_RR_MAX_TASKS; j++) {
+			i = (i + 1) % SIMPLE_RR_MAX_TASKS;
+			if (tasks[i] != 0) {
+				OS_TCB_t * task = tasks[i];
+					if(task->state & TASK_STATE_WAIT){//Do nothing if task is waiting
+					}
+					if(task->state & TASK_STATE_SLEEP){//If task is just asleep
+						uint32_t ticks = OS_elapsedTicks();
+						if(task->data <= ticks){//Check to see if it should be awake
+							task->state = task->state & (~ TASK_STATE_SLEEP); //wake task
+							return task;
+						}
+					}
+					else{
 						return task;
 					}
-				}
-				else{
-					return task;
-				}
+			}
+		}
+	}
+	else{
+		for (int j = 1; j <= SIMPLE_RR_MAX_TASKS; j++) {
+			i = (i + 1) % SIMPLE_RR_MAX_TASKS;
+			if (high[i] != 0) {
+				OS_TCB_t * task = high[i];
+					if(task->state & TASK_STATE_WAIT){//Do nothing if task is waiting
+					}
+					if(task->state & TASK_STATE_SLEEP){//If task is just asleep
+						uint32_t ticks = OS_elapsedTicks();
+						if(task->data <= ticks){//Check to see if it should be awake
+							task->state = task->state & (~ TASK_STATE_SLEEP); //wake task
+							return task;
+						}
+					}
+					else{
+						return task;
+					}
+			}
 		}
 	}
 	// No tasks in the list, so return the idle task
@@ -106,6 +139,15 @@ static void simpleRoundRobin_notify(void * reason){
 	for (int j = 1; j <= SIMPLE_RR_MAX_TASKS; j++) {
 		i = (i + 1) % SIMPLE_RR_MAX_TASKS;
 		if (tasks[i] != 0) {
+			OS_TCB_t* TCB = tasks[i];
+			if(TCB->state & TASK_STATE_WAIT){
+				if(TCB->data == iReason){
+					TCB->data = 0;
+					TCB->state &= (~TASK_STATE_WAIT);
+				}					
+			}
+		}
+		if (high[i] != 0) {
 			OS_TCB_t* TCB = tasks[i];
 			if(TCB->state & TASK_STATE_WAIT){
 				if(TCB->data == iReason){
