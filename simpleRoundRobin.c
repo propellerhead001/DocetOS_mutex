@@ -22,6 +22,7 @@ void simpleRoundRobin_wait(void * reason);
 void simpleRoundRobin_notify(void * reason);
 
 static OS_TCB_t * tasks[SIMPLE_RR_MAX_TASKS] = {0};
+static OS_TCB_t * high[SIMPLE_RR_MAX_TASKS] = {0};
 
 /* Scheduler block for the simple round-robin */
 OS_Scheduler_t const simpleRoundRobinScheduler = {
@@ -63,10 +64,21 @@ static OS_TCB_t const * simpleRoundRobin_scheduler(void) {
 
 /* 'Add task' callback */
 static void simpleRoundRobin_addTask(OS_TCB_t * const tcb) {
-	for (int i = 0; i < SIMPLE_RR_MAX_TASKS; i++) {
-		if (tasks[i] == 0) {
-			tasks[i] = tcb;
-			return;
+	uint32_t priority = tcb->priority;
+	if(priority){
+		for (int i = 0; i < SIMPLE_RR_MAX_TASKS; i++) {
+			if (high[i] == 0) {
+				high[i] = tcb;
+				return;
+			}
+		}
+	}
+	else{
+		for (int i = 0; i < SIMPLE_RR_MAX_TASKS; i++) {
+			if (tasks[i] == 0) {
+				tasks[i] = tcb;
+				return;
+			}
 		}
 	}
 	// If we get here, there are no free TCB slots, so the task just won't be added

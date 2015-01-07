@@ -94,6 +94,8 @@ int main(void) {
 	OS_initialiseTCB(&TCB6, stack6+64, task6, NULL);
 	OS_initialiseTCB(&TCB7, stack7+64, task7, NULL);
 	OS_initialiseTCB(&TCB8, stack8+64, task8, NULL);
+	
+	TCB1.priority = 1;
 
 	/* Initialise and start the OS */
 	OS_init(&simpleRoundRobinScheduler);

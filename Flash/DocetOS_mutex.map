@@ -179,55 +179,55 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
-    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry4.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry2.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __2printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  noretval__2printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_file.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char_file.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  noretval__2printf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __2printf.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
     ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
@@ -305,34 +305,34 @@ Image Symbol Table
     $v0                                      0x0800048c   Number         0  startup_stm32f4xx.o(.text)
     .text                                    0x080004cc   Section        0  serial.o(.text)
     .text                                    0x08000538   Section        0  main.o(.text)
-    .text                                    0x080007b4   Section        0  simpleroundrobin.o(.text)
-    simpleRoundRobin_scheduler               0x080007b5   Thumb Code   118  simpleroundrobin.o(.text)
-    simpleRoundRobin_addTask                 0x0800082b   Thumb Code    32  simpleroundrobin.o(.text)
-    simpleRoundRobin_taskExit                0x0800084b   Thumb Code    32  simpleroundrobin.o(.text)
-    simpleRoundRobin_wait                    0x0800086b   Thumb Code    30  simpleroundrobin.o(.text)
-    simpleRoundRobin_notify                  0x08000889   Thumb Code    96  simpleroundrobin.o(.text)
-    .text                                    0x08000914   Section        0  mutex.o(.text)
-    .text                                    0x0800097e   Section        0  sleep.o(.text)
-    .text                                    0x080009a0   Section        0  os.o(.text)
-    .text                                    0x08000b2c   Section        0  hardfault.o(.text)
-    .text                                    0x08000b88   Section        2  use_no_semi.o(.text)
-    .text                                    0x08000b8c   Section        0  noretval__2printf.o(.text)
-    .text                                    0x08000ba4   Section       78  rt_memclr_w.o(.text)
-    .text                                    0x08000bf2   Section        0  heapauxi.o(.text)
-    .text                                    0x08000bf8   Section        0  _printf_char_file.o(.text)
-    .text                                    0x08000c1c   Section        0  _printf_char_common.o(.text)
-    _printf_input_char                       0x08000c1d   Thumb Code    10  _printf_char_common.o(.text)
-    .text                                    0x08000c4c   Section       74  sys_stackheap_outer.o(.text)
-    .text                                    0x08000c96   Section        0  __printf_nopercent.o(.text)
-    .text                                    0x08000cbc   Section        0  exit.o(.text)
-    .text                                    0x08000cc8   Section        8  libspace.o(.text)
-    OS_func                                  0x08000cd0   Section      148  os_asm.o(OS_func)
-    $v0                                      0x08000cd0   Number         0  os_asm.o(OS_func)
-    SVC_tableStart                           0x08000cf0   Data           0  os_asm.o(OS_func)
-    x$fpl$fpinit                             0x08000d64   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x08000d64   Number         0  fpinit.o(x$fpl$fpinit)
-    .constdata                               0x08000d70   Section       24  simpleroundrobin.o(.constdata)
-    .constdata                               0x08000d88   Section        4  os.o(.constdata)
+    .text                                    0x080007b8   Section        0  simpleroundrobin.o(.text)
+    simpleRoundRobin_scheduler               0x080007b9   Thumb Code   118  simpleroundrobin.o(.text)
+    simpleRoundRobin_addTask                 0x0800082f   Thumb Code    62  simpleroundrobin.o(.text)
+    simpleRoundRobin_taskExit                0x0800086d   Thumb Code    32  simpleroundrobin.o(.text)
+    simpleRoundRobin_wait                    0x0800088d   Thumb Code    30  simpleroundrobin.o(.text)
+    simpleRoundRobin_notify                  0x080008ab   Thumb Code    96  simpleroundrobin.o(.text)
+    .text                                    0x0800093c   Section        0  mutex.o(.text)
+    .text                                    0x080009a6   Section        0  sleep.o(.text)
+    .text                                    0x080009c8   Section        0  os.o(.text)
+    .text                                    0x08000b54   Section        0  hardfault.o(.text)
+    .text                                    0x08000bb0   Section        2  use_no_semi.o(.text)
+    .text                                    0x08000bb4   Section        0  noretval__2printf.o(.text)
+    .text                                    0x08000bcc   Section       78  rt_memclr_w.o(.text)
+    .text                                    0x08000c1a   Section        0  heapauxi.o(.text)
+    .text                                    0x08000c20   Section        0  _printf_char_file.o(.text)
+    .text                                    0x08000c44   Section        0  _printf_char_common.o(.text)
+    _printf_input_char                       0x08000c45   Thumb Code    10  _printf_char_common.o(.text)
+    .text                                    0x08000c74   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x08000cbe   Section        0  __printf_nopercent.o(.text)
+    .text                                    0x08000ce4   Section        0  exit.o(.text)
+    .text                                    0x08000cf0   Section        8  libspace.o(.text)
+    OS_func                                  0x08000cf8   Section      148  os_asm.o(OS_func)
+    $v0                                      0x08000cf8   Number         0  os_asm.o(OS_func)
+    SVC_tableStart                           0x08000d18   Data           0  os_asm.o(OS_func)
+    x$fpl$fpinit                             0x08000d8c   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x08000d8c   Number         0  fpinit.o(x$fpl$fpinit)
+    .constdata                               0x08000d98   Section       24  simpleroundrobin.o(.constdata)
+    .constdata                               0x08000db0   Section        4  os.o(.constdata)
     .data                                    0x20000000   Section        4  retarget.o(.data)
     .data                                    0x20000004   Section       20  system_stm32f4xx.o(.data)
     .data                                    0x20000018   Section       12  main.o(.data)
@@ -343,16 +343,17 @@ Image Symbol Table
     OS_idleTCB                               0x2000002c   Data          16  os.o(.data)
     _ticks                                   0x2000003c   Data           4  os.o(.data)
     _scheduler                               0x20000040   Data           4  os.o(.data)
-    .bss                                     0x20000048   Section       32  simpleroundrobin.o(.bss)
+    .bss                                     0x20000048   Section       64  simpleroundrobin.o(.bss)
     tasks                                    0x20000048   Data          32  simpleroundrobin.o(.bss)
-    .bss                                     0x20000068   Section       64  os.o(.bss)
-    _idleTaskSF                              0x20000068   Data          64  os.o(.bss)
-    .bss                                     0x200000a8   Section       96  libspace.o(.bss)
-    HEAP                                     0x20000108   Section     4096  startup_stm32f4xx.o(HEAP)
-    Heap_Mem                                 0x20000108   Data        4096  startup_stm32f4xx.o(HEAP)
-    STACK                                    0x20001108   Section     1024  startup_stm32f4xx.o(STACK)
-    Stack_Mem                                0x20001108   Data        1024  startup_stm32f4xx.o(STACK)
-    __initial_sp                             0x20001508   Data           0  startup_stm32f4xx.o(STACK)
+    high                                     0x20000068   Data          32  simpleroundrobin.o(.bss)
+    .bss                                     0x20000088   Section       64  os.o(.bss)
+    _idleTaskSF                              0x20000088   Data          64  os.o(.bss)
+    .bss                                     0x200000c8   Section       96  libspace.o(.bss)
+    HEAP                                     0x20000128   Section     4096  startup_stm32f4xx.o(HEAP)
+    Heap_Mem                                 0x20000128   Data        4096  startup_stm32f4xx.o(HEAP)
+    STACK                                    0x20001128   Section     1024  startup_stm32f4xx.o(STACK)
+    Stack_Mem                                0x20001128   Data        1024  startup_stm32f4xx.o(STACK)
+    __initial_sp                             0x20001528   Data           0  startup_stm32f4xx.o(STACK)
 
     Global Symbols
 
@@ -542,64 +543,64 @@ Image Symbol Table
     task6                                    0x080005c7   Thumb Code    26  main.o(.text)
     task7                                    0x080005e1   Thumb Code    26  main.o(.text)
     task8                                    0x080005fb   Thumb Code    26  main.o(.text)
-    main                                     0x08000615   Thumb Code   196  main.o(.text)
-    _svc_task_wait                           0x080008e9   Thumb Code    12  simpleroundrobin.o(.text)
-    _svc_task_notify                         0x080008f5   Thumb Code    12  simpleroundrobin.o(.text)
-    init_mutex                               0x08000915   Thumb Code     8  mutex.o(.text)
-    OS_mutex_acquire                         0x0800091d   Thumb Code    70  mutex.o(.text)
-    OS_mutex_release                         0x08000963   Thumb Code    28  mutex.o(.text)
-    OS_sleep                                 0x0800097f   Thumb Code    32  sleep.o(.text)
-    OS_currentTCB                            0x080009a1   Thumb Code     6  os.o(.text)
-    OS_elapsedTicks                          0x080009a7   Thumb Code     6  os.o(.text)
-    SysTick_Handler                          0x080009ad   Thumb Code    20  os.o(.text)
-    _svc_OS_yield                            0x080009c1   Thumb Code    24  os.o(.text)
-    _svc_OS_schedule                         0x080009d9   Thumb Code    10  os.o(.text)
-    OS_init                                  0x080009e3   Thumb Code    72  os.o(.text)
-    OS_start                                 0x08000a2b   Thumb Code    20  os.o(.text)
-    _OS_task_end                             0x08000a3f   Thumb Code     4  os.o(.text)
-    OS_initialiseTCB                         0x08000a43   Thumb Code    56  os.o(.text)
-    _svc_OS_enable_irq                       0x08000a7b   Thumb Code   100  os.o(.text)
-    _svc_OS_addTask                          0x08000adf   Thumb Code    16  os.o(.text)
-    _OS_scheduler                            0x08000aef   Thumb Code    12  os.o(.text)
-    _svc_OS_task_exit                        0x08000afb   Thumb Code    24  os.o(.text)
-    HardFault_HandlerC                       0x08000b2d   Thumb Code    86  hardfault.o(.text)
-    __I$use$semihosting                      0x08000b89   Thumb Code     0  use_no_semi.o(.text)
-    __use_no_semihosting_swi                 0x08000b89   Thumb Code     2  use_no_semi.o(.text)
-    __2printf                                0x08000b8d   Thumb Code    20  noretval__2printf.o(.text)
-    __aeabi_memclr4                          0x08000ba5   Thumb Code     0  rt_memclr_w.o(.text)
-    __aeabi_memclr8                          0x08000ba5   Thumb Code     0  rt_memclr_w.o(.text)
-    __rt_memclr_w                            0x08000ba5   Thumb Code    78  rt_memclr_w.o(.text)
-    _memset_w                                0x08000ba9   Thumb Code     0  rt_memclr_w.o(.text)
-    __use_two_region_memory                  0x08000bf3   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_escrow$2region                 0x08000bf5   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_expand$2region                 0x08000bf7   Thumb Code     2  heapauxi.o(.text)
-    _printf_char_file                        0x08000bf9   Thumb Code    32  _printf_char_file.o(.text)
-    _printf_char_common                      0x08000c27   Thumb Code    32  _printf_char_common.o(.text)
-    __user_setup_stackheap                   0x08000c4d   Thumb Code    74  sys_stackheap_outer.o(.text)
-    __printf                                 0x08000c97   Thumb Code    38  __printf_nopercent.o(.text)
-    exit                                     0x08000cbd   Thumb Code    12  exit.o(.text)
-    __user_libspace                          0x08000cc9   Thumb Code     8  libspace.o(.text)
-    __user_perproc_libspace                  0x08000cc9   Thumb Code     0  libspace.o(.text)
-    __user_perthread_libspace                0x08000cc9   Thumb Code     0  libspace.o(.text)
-    SVC_Handler                              0x08000cd1   Thumb Code     0  os_asm.o(OS_func)
-    PendSV_Handler                           0x08000d0d   Thumb Code     0  os_asm.o(OS_func)
-    _task_switch                             0x08000d17   Thumb Code     0  os_asm.o(OS_func)
-    _task_init_switch                        0x08000d3d   Thumb Code     0  os_asm.o(OS_func)
-    _fp_init                                 0x08000d65   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x08000d6d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x08000d6d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    simpleRoundRobinScheduler                0x08000d70   Data          24  simpleroundrobin.o(.constdata)
-    OS_idleTCB_p                             0x08000d88   Data           4  os.o(.constdata)
-    Region$$Table$$Base                      0x08000d8c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000dac   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x08000615   Thumb Code   200  main.o(.text)
+    _svc_task_wait                           0x0800090b   Thumb Code    12  simpleroundrobin.o(.text)
+    _svc_task_notify                         0x08000917   Thumb Code    12  simpleroundrobin.o(.text)
+    init_mutex                               0x0800093d   Thumb Code     8  mutex.o(.text)
+    OS_mutex_acquire                         0x08000945   Thumb Code    70  mutex.o(.text)
+    OS_mutex_release                         0x0800098b   Thumb Code    28  mutex.o(.text)
+    OS_sleep                                 0x080009a7   Thumb Code    32  sleep.o(.text)
+    OS_currentTCB                            0x080009c9   Thumb Code     6  os.o(.text)
+    OS_elapsedTicks                          0x080009cf   Thumb Code     6  os.o(.text)
+    SysTick_Handler                          0x080009d5   Thumb Code    20  os.o(.text)
+    _svc_OS_yield                            0x080009e9   Thumb Code    24  os.o(.text)
+    _svc_OS_schedule                         0x08000a01   Thumb Code    10  os.o(.text)
+    OS_init                                  0x08000a0b   Thumb Code    72  os.o(.text)
+    OS_start                                 0x08000a53   Thumb Code    20  os.o(.text)
+    _OS_task_end                             0x08000a67   Thumb Code     4  os.o(.text)
+    OS_initialiseTCB                         0x08000a6b   Thumb Code    56  os.o(.text)
+    _svc_OS_enable_irq                       0x08000aa3   Thumb Code   100  os.o(.text)
+    _svc_OS_addTask                          0x08000b07   Thumb Code    16  os.o(.text)
+    _OS_scheduler                            0x08000b17   Thumb Code    12  os.o(.text)
+    _svc_OS_task_exit                        0x08000b23   Thumb Code    24  os.o(.text)
+    HardFault_HandlerC                       0x08000b55   Thumb Code    86  hardfault.o(.text)
+    __I$use$semihosting                      0x08000bb1   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x08000bb1   Thumb Code     2  use_no_semi.o(.text)
+    __2printf                                0x08000bb5   Thumb Code    20  noretval__2printf.o(.text)
+    __aeabi_memclr4                          0x08000bcd   Thumb Code     0  rt_memclr_w.o(.text)
+    __aeabi_memclr8                          0x08000bcd   Thumb Code     0  rt_memclr_w.o(.text)
+    __rt_memclr_w                            0x08000bcd   Thumb Code    78  rt_memclr_w.o(.text)
+    _memset_w                                0x08000bd1   Thumb Code     0  rt_memclr_w.o(.text)
+    __use_two_region_memory                  0x08000c1b   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x08000c1d   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x08000c1f   Thumb Code     2  heapauxi.o(.text)
+    _printf_char_file                        0x08000c21   Thumb Code    32  _printf_char_file.o(.text)
+    _printf_char_common                      0x08000c4f   Thumb Code    32  _printf_char_common.o(.text)
+    __user_setup_stackheap                   0x08000c75   Thumb Code    74  sys_stackheap_outer.o(.text)
+    __printf                                 0x08000cbf   Thumb Code    38  __printf_nopercent.o(.text)
+    exit                                     0x08000ce5   Thumb Code    12  exit.o(.text)
+    __user_libspace                          0x08000cf1   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x08000cf1   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x08000cf1   Thumb Code     0  libspace.o(.text)
+    SVC_Handler                              0x08000cf9   Thumb Code     0  os_asm.o(OS_func)
+    PendSV_Handler                           0x08000d35   Thumb Code     0  os_asm.o(OS_func)
+    _task_switch                             0x08000d3f   Thumb Code     0  os_asm.o(OS_func)
+    _task_init_switch                        0x08000d65   Thumb Code     0  os_asm.o(OS_func)
+    _fp_init                                 0x08000d8d   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x08000d95   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x08000d95   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    simpleRoundRobinScheduler                0x08000d98   Data          24  simpleroundrobin.o(.constdata)
+    OS_idleTCB_p                             0x08000db0   Data           4  os.o(.constdata)
+    Region$$Table$$Base                      0x08000db4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000dd4   Number         0  anon$$obj.o(Region$$Table)
     __stdout                                 0x20000000   Data           4  retarget.o(.data)
     SystemCoreClock                          0x20000004   Data           4  system_stm32f4xx.o(.data)
     AHBPrescTable                            0x20000008   Data          16  system_stm32f4xx.o(.data)
     printOut                                 0x20000018   Data           4  main.o(.data)
     printOuti                                0x2000001c   Data           8  main.o(.data)
     _currentTCB                              0x20000044   Data           4  os.o(.data)
-    __libspace_start                         0x200000a8   Data          96  libspace.o(.bss)
-    __temporary_stack_top$libspace           0x20000108   Data           0  libspace.o(.bss)
+    __libspace_start                         0x200000c8   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x20000128   Data           0  libspace.o(.bss)
 
 
 
@@ -609,9 +610,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000df4, Max: 0x00100000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000e1c, Max: 0x00100000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00000dac, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00000dd4, Max: 0x00100000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -666,33 +667,33 @@ Memory Map of the image
     0x08000280   0x0000020c   Code   RO           56    .text               system_stm32f4xx.o
     0x0800048c   0x00000040   Code   RO           83    .text               startup_stm32f4xx.o
     0x080004cc   0x0000006c   Code   RO           89    .text               serial.o
-    0x08000538   0x0000027c   Code   RO          112    .text               main.o
-    0x080007b4   0x00000160   Code   RO          166    .text               simpleroundrobin.o
-    0x08000914   0x0000006a   Code   RO          194    .text               mutex.o
-    0x0800097e   0x00000020   Code   RO          222    .text               sleep.o
-    0x0800099e   0x00000002   PAD
-    0x080009a0   0x0000018c   Code   RO          245    .text               os.o
-    0x08000b2c   0x0000005c   Code   RO          288    .text               hardfault.o
-    0x08000b88   0x00000002   Code   RO          303    .text               c_w.l(use_no_semi.o)
-    0x08000b8a   0x00000002   PAD
-    0x08000b8c   0x00000018   Code   RO          307    .text               c_w.l(noretval__2printf.o)
-    0x08000ba4   0x0000004e   Code   RO          309    .text               c_w.l(rt_memclr_w.o)
-    0x08000bf2   0x00000006   Code   RO          311    .text               c_w.l(heapauxi.o)
-    0x08000bf8   0x00000024   Code   RO          316    .text               c_w.l(_printf_char_file.o)
-    0x08000c1c   0x00000030   Code   RO          333    .text               c_w.l(_printf_char_common.o)
-    0x08000c4c   0x0000004a   Code   RO          335    .text               c_w.l(sys_stackheap_outer.o)
-    0x08000c96   0x00000026   Code   RO          337    .text               c_w.l(__printf_nopercent.o)
-    0x08000cbc   0x0000000c   Code   RO          339    .text               c_w.l(exit.o)
-    0x08000cc8   0x00000008   Code   RO          347    .text               c_w.l(libspace.o)
-    0x08000cd0   0x00000094   Code   RO          240    OS_func             os_asm.o
-    0x08000d64   0x0000000a   Code   RO          404    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x08000d6e   0x00000002   PAD
-    0x08000d70   0x00000018   Data   RO          168    .constdata          simpleroundrobin.o
-    0x08000d88   0x00000004   Data   RO          247    .constdata          os.o
-    0x08000d8c   0x00000020   Data   RO          465    Region$$Table       anon$$obj.o
+    0x08000538   0x00000280   Code   RO          112    .text               main.o
+    0x080007b8   0x00000184   Code   RO          166    .text               simpleroundrobin.o
+    0x0800093c   0x0000006a   Code   RO          194    .text               mutex.o
+    0x080009a6   0x00000020   Code   RO          222    .text               sleep.o
+    0x080009c6   0x00000002   PAD
+    0x080009c8   0x0000018c   Code   RO          245    .text               os.o
+    0x08000b54   0x0000005c   Code   RO          288    .text               hardfault.o
+    0x08000bb0   0x00000002   Code   RO          303    .text               c_w.l(use_no_semi.o)
+    0x08000bb2   0x00000002   PAD
+    0x08000bb4   0x00000018   Code   RO          307    .text               c_w.l(noretval__2printf.o)
+    0x08000bcc   0x0000004e   Code   RO          309    .text               c_w.l(rt_memclr_w.o)
+    0x08000c1a   0x00000006   Code   RO          311    .text               c_w.l(heapauxi.o)
+    0x08000c20   0x00000024   Code   RO          316    .text               c_w.l(_printf_char_file.o)
+    0x08000c44   0x00000030   Code   RO          333    .text               c_w.l(_printf_char_common.o)
+    0x08000c74   0x0000004a   Code   RO          335    .text               c_w.l(sys_stackheap_outer.o)
+    0x08000cbe   0x00000026   Code   RO          337    .text               c_w.l(__printf_nopercent.o)
+    0x08000ce4   0x0000000c   Code   RO          339    .text               c_w.l(exit.o)
+    0x08000cf0   0x00000008   Code   RO          347    .text               c_w.l(libspace.o)
+    0x08000cf8   0x00000094   Code   RO          240    OS_func             os_asm.o
+    0x08000d8c   0x0000000a   Code   RO          404    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x08000d96   0x00000002   PAD
+    0x08000d98   0x00000018   Data   RO          168    .constdata          simpleroundrobin.o
+    0x08000db0   0x00000004   Data   RO          247    .constdata          os.o
+    0x08000db4   0x00000020   Data   RO          465    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00001508, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00001528, Max: 0x00020000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -701,11 +702,11 @@ Memory Map of the image
     0x20000018   0x0000000c   Data   RW          113    .data               main.o
     0x20000024   0x00000008   Data   RW          169    .data               simpleroundrobin.o
     0x2000002c   0x0000001c   Data   RW          248    .data               os.o
-    0x20000048   0x00000020   Zero   RW          167    .bss                simpleroundrobin.o
-    0x20000068   0x00000040   Zero   RW          246    .bss                os.o
-    0x200000a8   0x00000060   Zero   RW          348    .bss                c_w.l(libspace.o)
-    0x20000108   0x00001000   Zero   RW           81    HEAP                startup_stm32f4xx.o
-    0x20001108   0x00000400   Zero   RW           80    STACK               startup_stm32f4xx.o
+    0x20000048   0x00000040   Zero   RW          167    .bss                simpleroundrobin.o
+    0x20000088   0x00000040   Zero   RW          246    .bss                os.o
+    0x200000c8   0x00000060   Zero   RW          348    .bss                c_w.l(libspace.o)
+    0x20000128   0x00001000   Zero   RW           81    HEAP                startup_stm32f4xx.o
+    0x20001128   0x00000400   Zero   RW           80    STACK               startup_stm32f4xx.o
 
 
 ==============================================================================
@@ -716,19 +717,19 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        112          6          0          0          0       1165   hardfault.o
-       636        220          0         12          0       4537   main.o
+       640        220          0         12          0       4541   main.o
        106          0          0          0          0       1299   mutex.o
        396         26          4         28         64      31567   os.o
        148         40          0          0          0        244   os_asm.o
         68          6          0          4          0     252077   retarget.o
        108         14          0          0          0        450   serial.o
-       352         20         24          8         32       2546   simpleroundrobin.o
+       388         26         24          8         64       2690   simpleroundrobin.o
         32          0          0          0          0        759   sleep.o
         64         26        392          0       5120        788   startup_stm32f4xx.o
        524         44          0         20          0       1755   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-      2548        402        452         72       5216     297187   Object Totals
+      2588        408        452         72       5248     297335   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          2          0          0          0          0          0   (incl. Padding)
 
@@ -782,15 +783,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      3048        428        452         72       5312     296267   Grand Totals
-      3048        428        452         72       5312     296267   ELF Image Totals
-      3048        428        452         72          0          0   ROM Totals
+      3088        434        452         72       5344     296415   Grand Totals
+      3088        434        452         72       5344     296415   ELF Image Totals
+      3088        434        452         72          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 3500 (   3.42kB)
-    Total RW  Size (RW Data + ZI Data)              5384 (   5.26kB)
-    Total ROM Size (Code + RO Data + RW Data)       3572 (   3.49kB)
+    Total RO  Size (Code + RO Data)                 3540 (   3.46kB)
+    Total RW  Size (RW Data + ZI Data)              5416 (   5.29kB)
+    Total ROM Size (Code + RO Data + RW Data)       3612 (   3.53kB)
 
 ==============================================================================
 
