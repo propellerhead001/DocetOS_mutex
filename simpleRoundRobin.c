@@ -18,12 +18,13 @@
 OS_TCB_t const * simpleRoundRobin_scheduler(void);
 void simpleRoundRobin_addTask(OS_TCB_t * const tcb);
 void simpleRoundRobin_taskExit(OS_TCB_t * const tcb);
-void simpleRoundRobin_wait(void * reason);
+void simpleRoundRobin_wait(void * reason, uint32_t check);
 void simpleRoundRobin_notify(void * reason);
 
 static OS_TCB_t * tasks[SIMPLE_RR_MAX_TASKS] = {0};
 static OS_TCB_t * high[SIMPLE_RR_MAX_TASKS] = {0};
-volatile OS_PriorityStates_t priorityState = HIGH1;
+static OS_PriorityStates_t priorityState = HIGH1;
+static uint32_t notifyCount = 0;
 
 /* Scheduler block for the simple round-robin */
 OS_Scheduler_t const simpleRoundRobinScheduler = {
@@ -40,18 +41,22 @@ OS_Scheduler_t const simpleRoundRobinScheduler = {
 static OS_TCB_t const * simpleRoundRobin_scheduler(void) {
 	static int i = 0;
 	switch(priorityState){
-		case HIGH1 : priorityState = HIGH2;
+		case HIGH1 : priorityState = LOW1;
 		break;
-		case HIGH2 : priorityState = LOW1;
+		case HIGH2 : priorityState = LOW2;
 		break;
-		case LOW1 : priorityState = HIGH1;
-		break;	
+		case HIGH3 : priorityState = HIGH1;
+		break;
+		case LOW1 : priorityState = HIGH2;
+		break;
+		case LOW2 : priorityState = HIGH3;
+		break;
 	}
 	
 	// Clear the yield flag if it's set - we simply don't care
 	OS_currentTCB()->state &= ~TASK_STATE_YIELD;
 	//Check to see which priority tasks should be run
-	if(priorityState == LOW1){
+	if((priorityState == LOW1)||(priorityState == LOW2)){
 		for (int j = 1; j <= SIMPLE_RR_MAX_TASKS; j++) {
 			i = (i + 1) % SIMPLE_RR_MAX_TASKS;
 			if (tasks[i] != 0) {
@@ -126,11 +131,13 @@ static void simpleRoundRobin_taskExit(OS_TCB_t * const tcb) {
 		}
 	}	
 }
-static void simpleRoundRobin_wait(void * reason){
-	OS_TCB_t * TCB = OS_currentTCB();
-	TCB->data = (uint32_t) (reason);
-	TCB->state |= TASK_STATE_WAIT; 	
-	SCB->ICSR = SCB_ICSR_PENDSVSET_Msk ;
+static void simpleRoundRobin_wait(void * reason, uint32_t check){
+	if(check == notifyCount){
+		OS_TCB_t * TCB = OS_currentTCB();
+		TCB->data = (uint32_t) (reason);
+		TCB->state |= TASK_STATE_WAIT; 	
+		SCB->ICSR = SCB_ICSR_PENDSVSET_Msk ;
+	}
 }
 
 static void simpleRoundRobin_notify(void * reason){
@@ -158,12 +165,17 @@ static void simpleRoundRobin_notify(void * reason){
 		}
 	}
 	SCB->ICSR = SCB_ICSR_PENDSVSET_Msk ;
+	notifyCount++;
 }
 
-void _svc_task_wait(_OS_SVC_StackFrame_t * stackFramePointer){
-	simpleRoundRobin_wait(((void *) stackFramePointer->r0));
+void _svc_OS_wait(_OS_SVC_StackFrame_t * stackFramePointer, uint32_t  check){
+	simpleRoundRobin_wait(((void *) stackFramePointer->r0),stackFramePointer->r1);
 }
 
-void _svc_task_notify(_OS_SVC_StackFrame_t * stackFramePointer){
+void _svc_OS_notify(_OS_SVC_StackFrame_t * stackFramePointer){
 	simpleRoundRobin_notify(((void *) stackFramePointer->r0));
+}
+
+uint32_t getNotifyCount(){
+	return notifyCount;
 }

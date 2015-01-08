@@ -23,8 +23,8 @@ ARM Macro Assembler    Page 1
    17 00000000                 IMPORT           _svc_OS_task_exit
    18 00000000                 IMPORT           _svc_OS_yield
    19 00000000                 IMPORT           _svc_OS_schedule
-   20 00000000                 IMPORT           _svc_task_wait
-   21 00000000                 IMPORT           _svc_task_notify
+   20 00000000                 IMPORT           _svc_OS_wait
+   21 00000000                 IMPORT           _svc_OS_notify
    22 00000000         
    23 00000000         SVC_Handler
    24 00000000         ; Link register contains special 'exit handler mode' cod
@@ -57,8 +57,8 @@ Start)/4)
    48 00000028 00000000        DCD              _svc_OS_task_exit
    49 0000002C 00000000        DCD              _svc_OS_yield
    50 00000030 00000000        DCD              _svc_OS_schedule
-   51 00000034 00000000        DCD              _svc_task_wait
-   52 00000038 00000000        DCD              _svc_task_notify
+   51 00000034 00000000        DCD              _svc_OS_wait
+   52 00000038 00000000        DCD              _svc_OS_notify
    53 0000003C         SVC_tableEnd
    54 0000003C         
    55 0000003C                 ALIGN
@@ -270,6 +270,14 @@ Symbol: _svc_OS_enable_irq
    Uses
       At line 46 in file OS\os_asm.s
 Comment: _svc_OS_enable_irq used once
+_svc_OS_notify 00000000
+
+Symbol: _svc_OS_notify
+   Definitions
+      At line 21 in file OS\os_asm.s
+   Uses
+      At line 52 in file OS\os_asm.s
+Comment: _svc_OS_notify used once
 _svc_OS_schedule 00000000
 
 Symbol: _svc_OS_schedule
@@ -286,6 +294,20 @@ Symbol: _svc_OS_task_exit
    Uses
       At line 48 in file OS\os_asm.s
 Comment: _svc_OS_task_exit used once
+_svc_OS_wait 00000000
+
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+External symbols
+
+Symbol: _svc_OS_wait
+   Definitions
+      At line 20 in file OS\os_asm.s
+   Uses
+      At line 51 in file OS\os_asm.s
+Comment: _svc_OS_wait used once
 _svc_OS_yield 00000000
 
 Symbol: _svc_OS_yield
@@ -294,27 +316,5 @@ Symbol: _svc_OS_yield
    Uses
       At line 49 in file OS\os_asm.s
 Comment: _svc_OS_yield used once
-_svc_task_notify 00000000
-
-
-
-
-ARM Macro Assembler    Page 2 Alphabetic symbol ordering
-External symbols
-
-Symbol: _svc_task_notify
-   Definitions
-      At line 21 in file OS\os_asm.s
-   Uses
-      At line 52 in file OS\os_asm.s
-Comment: _svc_task_notify used once
-_svc_task_wait 00000000
-
-Symbol: _svc_task_wait
-   Definitions
-      At line 20 in file OS\os_asm.s
-   Uses
-      At line 51 in file OS\os_asm.s
-Comment: _svc_task_wait used once
 9 symbols
 351 symbols in table

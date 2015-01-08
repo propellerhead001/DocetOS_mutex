@@ -13,7 +13,7 @@ void task1(void const *const args) {
 		OS_mutex_acquire(printOut);
 		printf("Message from Task 1\r\n");
 		OS_mutex_release(printOut);
-		OS_sleep(100);
+		OS_sleep(500);
 	}
 }
 
@@ -22,7 +22,6 @@ void task2(void const *const args) {
 		OS_mutex_acquire(printOut);
 		printf("Message from Task 2\r\n");
 		OS_mutex_release(printOut);
-		OS_sleep(100);
 	}
 }
 void task3(void const *const args) {
@@ -30,7 +29,6 @@ void task3(void const *const args) {
 		OS_mutex_acquire(printOut);
 		printf("Message from Task 3\r\n");
 		OS_mutex_release(printOut);
-		OS_sleep(200);
 	}
 }
 void task4(void const *const args) {
@@ -98,6 +96,9 @@ int main(void) {
 	OS_initialiseTCB(&TCB8, stack8+64, task8, NULL);
 	
 	TCB1.priority = 1;
+	TCB3.priority = 1;
+	TCB5.priority = 1;
+	TCB7.priority = 1;
 
 	/* Initialise and start the OS */
 	OS_init(&simpleRoundRobinScheduler);

@@ -21,7 +21,7 @@ typedef struct {
 	OS_TCB_t const * (* scheduler_callback)(void);
 	void (* addtask_callback)(OS_TCB_t * const newTask);
 	void (* taskexit_callback)(OS_TCB_t * const task);
-	void (* wait_callback)(void * const w_callback);
+	void (* wait_callback)(void * const w_callback, uint32_t check);
 	void (* notify_callback)(void * const n_callback);
 } OS_Scheduler_t;
 

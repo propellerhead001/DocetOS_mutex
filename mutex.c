@@ -6,6 +6,7 @@ void init_mutex(volatile OS_mutex_t * mutex){
 }
 
 uint32_t OS_mutex_acquire(volatile OS_mutex_t * mutex){
+	uint32_t notifyCount = getNotifyCount();
 	while(1){
 		uint32_t holder = __LDREXW((uint32_t *) mutex);
 		while(__STREXW(holder, (uint32_t *)mutex)) holder = __LDREXW((uint32_t *) mutex);
@@ -20,7 +21,7 @@ uint32_t OS_mutex_acquire(volatile OS_mutex_t * mutex){
 			return 1;
 		}
 		else{
-			_task_wait((void *)mutex);
+			OS_wait((void *)mutex, notifyCount);
 		}
 	};
 }
@@ -28,6 +29,6 @@ uint32_t OS_mutex_acquire(volatile OS_mutex_t * mutex){
 void OS_mutex_release(volatile OS_mutex_t * mutex){
 	if(mutex->counter) mutex->counter--;
 	if(!(mutex->counter))mutex->holder = 0;
-	_task_notify((void *)mutex);
+	OS_notify((void *)mutex);
 }
 
