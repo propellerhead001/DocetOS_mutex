@@ -83,7 +83,7 @@ static OS_TCB_t const * simpleRoundRobin_scheduler(void) {
 				OS_TCB_t * task = high[i];
 					if(task->state & TASK_STATE_WAIT){//Do nothing if task is waiting
 					}
-					if(task->state & TASK_STATE_SLEEP){//If task is just asleep
+					if(task->state & TASK_STATE_SLEEP){//If task is asleep
 						uint32_t ticks = OS_elapsedTicks();
 						if(task->data <= ticks){//Check to see if it should be awake
 							task->state = task->state & (~ TASK_STATE_SLEEP); //wake task
@@ -128,6 +128,9 @@ static void simpleRoundRobin_taskExit(OS_TCB_t * const tcb) {
 	for (int i = 0; i < SIMPLE_RR_MAX_TASKS; i++) {
 		if (tasks[i] == tcb ) {
 			tasks[i] = 0;
+		}
+		if (high[i] == tcb ) {
+			high[i] = 0;
 		}
 	}	
 }
@@ -178,4 +181,44 @@ void _svc_OS_notify(_OS_SVC_StackFrame_t * stackFramePointer){
 
 uint32_t getNotifyCount(){
 	return notifyCount;
+}
+//*Promotes a task from the low priority list to the high priority list if the there is space
+void promoteTask(OS_TCB_t * toPromote){
+	if(toPromote->priority){ //Do nothing
+	}
+	else{
+		for (int i = 0; i < SIMPLE_RR_MAX_TASKS; i++) {  
+			if (high[i] == 0) {
+				high[i] = toPromote;
+				toPromote->priority = 1;
+				//Only remove from high priority list if space available in low priority
+				for (int i = 0; i < SIMPLE_RR_MAX_TASKS; i++) {
+					if (tasks[i] == toPromote) {
+						tasks[i] = 0;
+						return;
+					}
+				}
+			}
+		}
+	}
+}
+// Demotes a task from the high priority task list to the lower priority list if there is space
+void demoteTask(OS_TCB_t * toDemote){
+	if(toDemote->priority){
+		for (int i = 0; i < SIMPLE_RR_MAX_TASKS; i++) {  
+			if (tasks[i] == 0) {
+				tasks[i] = toDemote;
+				toDemote->priority = 0;
+				//Only remove from high priority list if space available in low priority
+				for (int i = 0; i < SIMPLE_RR_MAX_TASKS; i++) {
+					if (high[i] == toDemote) {
+						high[i] = 0;
+						return;
+					}
+				}
+			}
+		}
+	}
+	else{// Do Nothing
+	}
 }

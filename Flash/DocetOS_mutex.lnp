@@ -7,6 +7,7 @@
 ".\flash\simpleroundrobin.o"
 ".\flash\mutex.o"
 ".\flash\sleep.o"
+".\flash\mpu.o"
 ".\flash\os_asm.o"
 ".\flash\os.o"
 ".\flash\hardfault.o"

@@ -1,0 +1,9 @@
+.\flash\mpu.o: mpu.c
+.\flash\mpu.o: mpu.h
+.\flash\mpu.o: C:\Keil_u4\ARM\Inc\ST\STM32F4xx\stm32f4xx.h
+.\flash\mpu.o: C:\Keil_u4\ARM\CMSIS\Include\core_cm4.h
+.\flash\mpu.o: C:\Keil_u4\ARM\ARMCC\bin\..\include\stdint.h
+.\flash\mpu.o: C:\Keil_u4\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\mpu.o: C:\Keil_u4\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\mpu.o: C:\Keil_u4\ARM\CMSIS\Include\core_cm4_simd.h
+.\flash\mpu.o: C:\Keil_u4\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h

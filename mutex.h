@@ -9,9 +9,10 @@
 typedef struct{
 	OS_TCB_t * holder;
 	uint32_t counter;
+	uint32_t promote;
 } OS_mutex_t;
 
-void init_mutex(volatile OS_mutex_t * mutex);
+void init_mutex(volatile OS_mutex_t * mutex, uint32_t canPromote);
 uint32_t OS_mutex_acquire(volatile OS_mutex_t * mutex);
 void OS_mutex_release(volatile OS_mutex_t * mutex);
 #endif /* _MUTEX_H_ */
